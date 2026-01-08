@@ -1,0 +1,12 @@
+package com.ecom.invoice.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class InvoiceController {
+
+	public String generateInvoice(InvoiceRequest invoiceRequest)
+	{
+		
+	}
+}

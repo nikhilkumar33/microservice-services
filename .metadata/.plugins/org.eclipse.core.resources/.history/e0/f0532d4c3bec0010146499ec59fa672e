@@ -1,0 +1,13 @@
+package com.ecom.invoice.request;
+
+public class InvoiceRequest 
+{
+	private String itemName;
+	private int qty;
+	private int amount;
+	private String description;
+	private String transactionId;
+	private String note;
+	
+	
+}

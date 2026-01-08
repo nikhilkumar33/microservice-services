@@ -1,0 +1,5 @@
+package com.ecom.invoice.repository;
+
+public interface InvoiceRepository {
+
+}

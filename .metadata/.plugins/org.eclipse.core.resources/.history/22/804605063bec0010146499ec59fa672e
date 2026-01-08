@@ -1,0 +1,5 @@
+package com.ecom.invoice.controller;
+
+public class InvoiceController {
+
+}

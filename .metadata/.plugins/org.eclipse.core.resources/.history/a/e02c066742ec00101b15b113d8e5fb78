@@ -1,0 +1,25 @@
+package com.ecom.invoice.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.ecom.invoice.request.InvoiceRequest;
+import com.ecom.invoice.service.InvoiceService;
+import com.netflix.discovery.converters.Auto;
+
+@RestController
+public class InvoiceController {
+	
+	@Autowired
+	InvoiceService invoiceService;
+	
+	@PostMapping("generateInvoice")
+	public String generateInvoice(@RequestBody InvoiceRequest invoiceRequest)
+	{
+		System.out.println(invoiceRequest.getItemName());
+		int invoiceId = invoiceService.createInvoice(invoiceRequest);
+		return null;
+	}
+}
