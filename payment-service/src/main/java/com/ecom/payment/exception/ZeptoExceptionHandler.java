@@ -1,10 +1,10 @@
-package com.ecom.order.exception;
+package com.ecom.payment.exception;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import com.ecom.order.response.ErrorResponse;
+import com.ecom.payment.response.ErrorResponse;
 
 @RestControllerAdvice
 public class ZeptoExceptionHandler {

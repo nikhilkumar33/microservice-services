@@ -1,5 +1,4 @@
-package com.ecom.order.exception;
-
+package com.ecom.payment.exception;
 
 public class PaymentFailedException extends RuntimeException
 {

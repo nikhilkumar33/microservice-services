@@ -14,8 +14,9 @@ public class OrderEntity
 	private String itemName;
 	private int qty;
 	private int amount;
-	private String paymentStatus;
 	private String description;
+	private int userId;
+	
 	public int getOrderId() {
 		return orderId;
 	}
@@ -40,18 +41,18 @@ public class OrderEntity
 	public void setAmount(int amount) {
 		this.amount = amount;
 	}
-	public String getPaymentStatus() {
-		return paymentStatus;
-	}
-	public void setPaymentStatus(String paymentStatus) {
-		this.paymentStatus = paymentStatus;
-	}
 	public String getDescription() {
 		return description;
 	}
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	public int getUserId() {
+		return userId;
+	}
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
 	
-	
+
 }
