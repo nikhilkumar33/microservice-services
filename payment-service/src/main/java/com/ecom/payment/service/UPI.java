@@ -4,30 +4,35 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ecom.payment.entity.PaymentEntity;
-import com.ecom.payment.exception.PaymentFailedException;
 import com.ecom.payment.repository.PaymentRepository;
 import com.ecom.payment.request.PaymentRequest;
+import com.ecom.payment.response.PaymentResponse;
 
-@Service
+import jakarta.transaction.Transactional;
+
+@Service("upi")
 public class UPI implements PaymentService
 {
 	@Autowired
 	PaymentRepository paymentRepository;
 	
 	@Override
-	public int processsPayment(PaymentRequest paymentRequest) {
+	@Transactional
+	public PaymentResponse processsPayment(PaymentRequest paymentRequest) {
 		
 		PaymentEntity entity = new PaymentEntity();
-		if(!paymentRequest.getStatus().equals("PAID")) 
-		{
-			throw new PaymentFailedException("Payment is failed.. Payment status is: "+paymentRequest.getStatus());
-		}
 		entity.setOrderId(paymentRequest.getOrderId());
 		entity.setAmount(paymentRequest.getAmount());
-		entity.setStatus(paymentRequest.getStatus());
+		entity.setStatus("SUCCESS");
 		
 		entity = paymentRepository.save(entity);
-		return entity.getPaymentId();
+		System.out.println("Payment id is: "+entity.getPaymentId());
+		PaymentResponse response = new PaymentResponse();
+		response.setPaymentId(entity.getPaymentId());
+		response.setAmount(entity.getAmount());
+		response.setStatus(entity.getStatus());
+		return response;
+
 	}
 
 }

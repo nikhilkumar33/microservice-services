@@ -1,4 +1,4 @@
-GitRepositoriesView.GitDirectories=D\:\\MavenKode\\.git;
-GitRepositoriesView.GitDirectories.relative=D\:\\MavenKode\\.git;
+GitRepositoriesView.GitDirectories=D\:\\Microservices-kode\\.git;D\:\\MavenKode\\.git;
+GitRepositoriesView.GitDirectories.relative=.git;D\:\\MavenKode\\.git;
 core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1
