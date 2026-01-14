@@ -37,7 +37,6 @@ public class OrderServiceImplementation implements OrderService {
 		request.setOrderId(entity.getOrderId());
 		request.setAmount(entity.getAmount());
 		PaymentResponse response = paymentClient.makePayment(request);
-		System.out.println("PaymentId is :"+response.getPaymentId());
 		if(!response.getStatus().equals("SUCCESS")) {
 			throw new PaymentFailedException("Payment Failed...!"+response.getStatus());
 		}

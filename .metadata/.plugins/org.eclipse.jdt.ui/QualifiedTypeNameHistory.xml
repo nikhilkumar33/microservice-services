@@ -8,7 +8,6 @@
     <fullyQualifiedTypeName name="com.ecom.invoice.service.InvoiceService"/>
     <fullyQualifiedTypeName name="org.springframework.cloud.client.discovery.EnableDiscoveryClient"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Entity"/>
@@ -36,4 +35,10 @@
     <fullyQualifiedTypeName name="com.ecom.order.request.PaymentRequest"/>
     <fullyQualifiedTypeName name="com.ecom.order.response.ErrorResponse"/>
     <fullyQualifiedTypeName name="jakarta.transaction.Transactional"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
+    <fullyQualifiedTypeName name="brave.propagation.Propagation"/>
+    <fullyQualifiedTypeName name="brave.Tracer"/>
+    <fullyQualifiedTypeName name="brave.propagation.TraceContext"/>
+    <fullyQualifiedTypeName name="brave.propagation.CurrentTraceContext"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
 </qualifiedTypeNameHistroy>
