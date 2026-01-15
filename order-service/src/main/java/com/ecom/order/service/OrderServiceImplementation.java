@@ -10,6 +10,7 @@ import com.ecom.order.repository.OrderRepository;
 import com.ecom.order.request.OrderRequest;
 import com.ecom.order.request.PaymentRequest;
 import com.ecom.order.response.PaymentResponse;
+import com.ecom.order.service.kafka.KafkaProducerService;
 
 import jakarta.transaction.Transactional;
 
@@ -19,7 +20,9 @@ public class OrderServiceImplementation implements OrderService {
 	OrderRepository orderRepository;
 	@Autowired
 	PaymentClient paymentClient;
-
+	@Autowired
+	KafkaProducerService kafkaProducerService;
+	
 	@Override
 	@Transactional
 	public int createOrder(OrderRequest orderRequest)
@@ -40,8 +43,10 @@ public class OrderServiceImplementation implements OrderService {
 		if(!response.getStatus().equals("SUCCESS")) {
 			throw new PaymentFailedException("Payment Failed...!"+response.getStatus());
 		}
+		
+		kafkaProducerService.sendMessage("Payment successfully done your order id is: "+entity.getOrderId());
+		
 		return entity.getOrderId();
-
 	}
 
 }
