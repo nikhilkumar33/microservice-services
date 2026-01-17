@@ -21,7 +21,6 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestControllerAdvice"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ExceptionHandler"/>
     <fullyQualifiedTypeName name="com.ecom.payment.response.ErrorResponse"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
     <fullyQualifiedTypeName name="com.ecom.payment.service.PaymentService"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Qualifier"/>
     <fullyQualifiedTypeName name="org.springframework.cloud.openfeign.EnableFeignClients"/>
@@ -31,7 +30,6 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
     <fullyQualifiedTypeName name="com.ecom.order.client.PaymentClient"/>
     <fullyQualifiedTypeName name="com.netflix.discovery.converters.Auto"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="com.ecom.order.request.PaymentRequest"/>
     <fullyQualifiedTypeName name="com.ecom.order.response.ErrorResponse"/>
     <fullyQualifiedTypeName name="jakarta.transaction.Transactional"/>
@@ -41,4 +39,11 @@
     <fullyQualifiedTypeName name="brave.propagation.TraceContext"/>
     <fullyQualifiedTypeName name="brave.propagation.CurrentTraceContext"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
+    <fullyQualifiedTypeName name="org.slf4j.Logger"/>
+    <fullyQualifiedTypeName name="org.slf4j.LoggerFactory"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="org.springframework.kafka.core.KafkaTemplate"/>
+    <fullyQualifiedTypeName name="com.ecom.order.service.kafka.KafkaProducerService"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 </qualifiedTypeNameHistroy>

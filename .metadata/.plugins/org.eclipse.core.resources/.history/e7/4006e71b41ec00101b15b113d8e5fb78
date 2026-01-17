@@ -1,6 +1,0 @@
-package com.ecom.invoice.service;
-
-public class InvoiceServiceImpl implements InvoiceService
-{
-
-}

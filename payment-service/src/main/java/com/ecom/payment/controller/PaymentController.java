@@ -27,7 +27,7 @@ public class PaymentController {
 	public ResponseEntity<PaymentResponse> makePayment(@RequestBody PaymentRequest paymentRequest) {
 
 		logger.info("Payment request received: {}",paymentRequest);
-
+System.out.println("hbgsdizkfnkwbag");
 		PaymentResponse response = paymentService.processsPayment(paymentRequest);
 
 		return ResponseEntity.ok(response);

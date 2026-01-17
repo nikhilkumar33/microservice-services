@@ -20,11 +20,12 @@ public class Card implements PaymentService
 	@Transactional
 	public PaymentResponse processsPayment(PaymentRequest paymentRequest) {
 		
+		
 		PaymentEntity entity = new PaymentEntity();
 	
 		entity.setOrderId(paymentRequest.getOrderId());
 		entity.setAmount(paymentRequest.getAmount());
-		entity.setStatus("SUCCESS");
+		entity.setStatus("FAILED");
 		
 		entity = paymentRepository.save(entity);
 		

@@ -1,5 +1,0 @@
-package com.ecom.invoice.service;
-
-public interface InvoiceService {
-
-}

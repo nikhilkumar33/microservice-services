@@ -23,7 +23,7 @@ public class UPI implements PaymentService
 		PaymentEntity entity = new PaymentEntity();
 		entity.setOrderId(paymentRequest.getOrderId());
 		entity.setAmount(paymentRequest.getAmount());
-		entity.setStatus("fail");
+		entity.setStatus("SUCCESS");
 		
 		entity = paymentRepository.save(entity);
 		PaymentResponse response = new PaymentResponse();
